@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-// import scss from './FeedbackOptions.module.scss';
+import scss from './feedbackOptions.module.scss';
 
 const FeedbackOptions = ({ options, leaveFeedback }) => {
   const elements = options.map(propName => (
     <button
+      className={scss.button}
       key={propName}
       onClick={() => {
         return leaveFeedback(propName);

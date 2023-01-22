@@ -3,6 +3,7 @@ import scss from 'feedback.module.scss';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from './Section/Section';
+import Notification from './Notification/Notification';
 
 const feedbackOptions = ['good', 'neutral', 'bad'];
 
@@ -45,20 +46,24 @@ class App extends Component {
       <>
         <div className={scss.wrapper}>
           <Section title="Please leave feedback">
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={total}
-              goodPercent={goodPercent}
-            ></Statistics>
-          </Section>
-
-          <Section title="Statistics">
             <FeedbackOptions
               options={feedbackOptions}
               leaveFeedback={this.leaveFeedback}
             ></FeedbackOptions>
+          </Section>
+
+          <Section title="Statistics">
+            {!this.countTotalFeedback() ? (
+              <Notification message={'There is no feedback'}></Notification>
+            ) : (
+              <Statistics
+                good={good}
+                neutral={neutral}
+                bad={bad}
+                total={total}
+                goodPercent={goodPercent}
+              ></Statistics>
+            )}
           </Section>
         </div>
       </>

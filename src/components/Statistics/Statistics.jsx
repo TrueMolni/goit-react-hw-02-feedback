@@ -4,13 +4,13 @@ import scss from './statistics.module.scss';
 function Statistics({ good, neutral, bad, total, goodPercent }) {
   return (
     <>
-      <h2>Statistics</h2>
-
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive percentage: {goodPercent}%</p>
+      <p className={scss.text}>Good: {good}</p>
+      <p className={scss.text}>Neutral: {neutral}</p>
+      <p className={scss.text}>Bad: {bad}</p>
+      <p className={scss.text}>Total: {total}</p>
+      <p className={`${scss.text} ${scss.accent}`}>
+        Positive percentage: {goodPercent}%
+      </p>
     </>
   );
 }
