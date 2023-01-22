@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  gap: 30px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 16px;
+}
