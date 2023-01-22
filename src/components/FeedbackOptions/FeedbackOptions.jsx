@@ -17,19 +17,6 @@ const FeedbackOptions = ({ options, leaveFeedback }) => {
   return <>{elements}</>;
 };
 
-{
-  /* <h2 className={scss.title}>Please leave feedback</h2>
-      <button onClick={onClick} className={scss.button} type="button">
-        Good
-      </button>
-      <button onClick={onClick} className={scss.button} type="button">
-        Neutral
-      </button>
-      <button onClick={onClick} className={scss.button} type="button">
-        Bad
-      </button> */
-}
-
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
